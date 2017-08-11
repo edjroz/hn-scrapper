@@ -17,5 +17,5 @@ class HackerNewsSpider(Spider):
             item = HackerNewItem()
             item['title'] = new.xpath("a[@href]/text()").extract()[0]
             item['url'] = new.xpath("a/@href").extract()[0]
-            print(item)
-            yield
+            
+            yield item
